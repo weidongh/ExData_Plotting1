@@ -3,6 +3,6 @@ plot1 <- function(file) {
     data <- data[data$Date == '1/2/2007' | data$Date == '2/2/2007', ]
     data$Date <- as.Date(data$Date, '%d/%m/%Y')
     png('plot1.png')
-    hist(data$Global_active_power, col='red')
+    hist(data$Global_active_power, col='red', xlab='Global Active Power (kilowatts)')
     dev.off()   
 }
